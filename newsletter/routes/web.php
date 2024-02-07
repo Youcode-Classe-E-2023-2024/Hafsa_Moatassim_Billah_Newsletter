@@ -33,6 +33,14 @@ Route::post('/logout', [LogoutController::class, 'destroy'])->name('logout')->mi
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::post('/forgot-password', [loginController::class, 'storeforgot']);
+Route::post('/forgot-password/{token}', [loginController::class, 'reset']);
+
+//Route::get('/dashboard', function () {
+//    return redirect('/home/dashboard');
+//});
