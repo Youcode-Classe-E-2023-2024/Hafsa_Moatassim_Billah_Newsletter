@@ -19,10 +19,24 @@
             <div class="text-center mb-4">
                 <h6 class="font-semibold text-[#063970] text-xl">Login</h6>
             </div>
-            <form action="{{route('password.email')}}" class="space-y-5" method="POST">
+            <form action="{{ route('password.update', ['token' => $token]) }}" class="space-y-5" method="POST">
+                @csrf
+
+                <input type="hidden" name="token" value="{{ $token }}">
+
 
                 <div class="relative w-full">
-                    <input :type="showPass ? 'password' : 'text'" id="password" class="block w-full py-3 px-3 mt-2 mb-4
+                    <input :type="showPass ? 'email' : 'text'" id="email" name="email" class="block w-full py-3 px-3 mt-2 mb-4
+                            text-gray-800 appearance-none
+                            border-2 border-gray-100
+                            focus:text-gray-500 focus:outline-none focus:border-gray-200 rounded-md" />
+                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                        <p class="font-semibold" @click="showPass = !showPass" x-text ="showPass ? 'Show' : 'Hide'">Show</p>
+                    </div>
+                </div>
+
+                <div class="relative w-full">
+                    <input :type="showPass ? 'password' : 'text'" id="password" name="password" class="block w-full py-3 px-3 mt-2 mb-4
                             text-gray-800 appearance-none
                             border-2 border-gray-100
                             focus:text-gray-500 focus:outline-none focus:border-gray-200 rounded-md" />
@@ -31,7 +45,7 @@
                     </div>
                 </div>
                 <div class="relative w-full">
-                    <input :type="showPass ? 'password' : 'text'" id="newpassword" class="block w-full py-3 px-3 mt-2 mb-4
+                    <input :type="showPass ? 'password' : 'text'" id="password_confirmation" name="password_confirmation" class="block w-full py-3 px-3 mt-2 mb-4
                             text-gray-800 appearance-none
                             border-2 border-gray-100
                             focus:text-gray-500 focus:outline-none focus:border-gray-200 rounded-md" />
