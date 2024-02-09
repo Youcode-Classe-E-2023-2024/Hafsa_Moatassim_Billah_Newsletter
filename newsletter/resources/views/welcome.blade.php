@@ -20,7 +20,7 @@
             <nav class="flex items-center">
                 <a href="#" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Home</a>
                 <a href="/about" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">About</a>
-                <a href="#" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Gallery</a>
+                <a href="{{'dashboard'}}" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Gallery</a>
                 <a href="{{'register'}}" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Register</a>
             </nav>
         </div>
