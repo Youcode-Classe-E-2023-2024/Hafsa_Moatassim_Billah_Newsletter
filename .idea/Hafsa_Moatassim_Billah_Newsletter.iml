@@ -3,6 +3,12 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/newsletter/vendor/spatie/laravel-permission" />
+      <excludeFolder url="file://$MODULE_DIR$/newsletter/vendor/spatie/laravel-package-tools" />
+      <excludeFolder url="file://$MODULE_DIR$/newsletter/vendor/spatie/image-optimizer" />
+      <excludeFolder url="file://$MODULE_DIR$/newsletter/vendor/spatie/laravel-medialibrary" />
+      <excludeFolder url="file://$MODULE_DIR$/newsletter/vendor/spatie/temporary-directory" />
+      <excludeFolder url="file://$MODULE_DIR$/newsletter/vendor/spatie/image" />
+      <excludeFolder url="file://$MODULE_DIR$/newsletter/vendor/maennchen/zipstream-php" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

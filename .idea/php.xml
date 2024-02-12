@@ -115,6 +115,12 @@
       <path value="$PROJECT_DIR$/newsletter/vendor/psr/container" />
       <path value="$PROJECT_DIR$/newsletter/vendor/psr/clock" />
       <path value="$PROJECT_DIR$/newsletter/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/newsletter/vendor/spatie/laravel-package-tools" />
+      <path value="$PROJECT_DIR$/newsletter/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/newsletter/vendor/spatie/laravel-medialibrary" />
+      <path value="$PROJECT_DIR$/newsletter/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/newsletter/vendor/spatie/image" />
+      <path value="$PROJECT_DIR$/newsletter/vendor/maennchen/zipstream-php" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
