@@ -1,176 +1,127 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>dashboard</title>
-</head>
-<body>
-<div class="container mx-auto px-6 sm:px-12 flex items-center justify-end">
-    <nav class="flex items-center">
-        <a href="/"
-           class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Home</a>
-        <a href="/about"
-           class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">About</a>
-        <a href="#"
-           class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Gallery</a>
-        <form action="{{'logout'}}" method="post">
-            @csrf
-            <button type="submit"
-                    class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">
-                Logout
-            </button>
-        </form>
-    </nav>
-</div>
-<div class="flex justify-center items-center">
-    <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
-    <div class="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
-        <div role="main" class="flex flex-col items-center justify-center">
-            <h1 class="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50">This Week
-                Newsletter</h1>
-            <p class="text-base leading-normal text-center text-gray-600 dark:text-white mt-4 lg:w-1/2 md:w-10/12 w-11/12">
-                If you're looking for random paragraphs, you've come to the right place. When a random word or a random
-                sentence isn't quite enough</p>
-        </div>
-        <div class="lg:flex items-stretch md:mt-12 mt-8">
-            <div class="lg:w-1/2">
-                <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6">
-                    <div class="sm:w-1/2 relative">
-                        <div>
-                            <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                                2021</p>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                                <a href="javascript:void(0)"
-                                   class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                              stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="https://i.ibb.co/DYxtCJq/img-1.png" class="w-full" alt="chair"/>
-                    </div>
-                    <div class="sm:w-1/2 sm:mt-0 mt-4 relative">
-                        <div>
-                            <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                                2021</p>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                                <a href="javascript:void(0)"
-                                   class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                              stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="https://i.ibb.co/3C5HvxC/img-2.png" class="w-full" alt="wall design"/>
+
+@include('side')
+<div class="flex-1 p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2 p-2">
+
+            <div class="bg-white p-4 rounded-md">
+                <h2 class="text-gray-500 text-lg font-semibold pb-4">User</h2>
+                <div class="my-1"></div>
+                <div class="bg-gradient-to-r from-cyan-300 to-cyan-500 h-px mb-6"></div>
+                <table class="w-full table-auto text-sm">
+                    <thead>
+                        <tr class="text-sm leading-normal">
+                            <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light">Foto</th>
+                            <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light">Nombre</th>
+                            <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light">Rol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-grey-lighter">
+                            <td class="py-2 px-4 border-b border-grey-light"><img src="https://via.placeholder.com/40" alt="Foto Perfil" class="rounded-full h-10 w-10"></td>
+                            <td class="py-2 px-4 border-b border-grey-light">Juan Pérez</td>
+                            <td class="py-2 px-4 border-b border-grey-light">Comercio</td>
+                        </tr>
+                        <tr class="hover:bg-grey-lighter">
+                            <td class="py-2 px-4 border-b border-grey-light"><img src="https://via.placeholder.com/40" alt="Foto Perfil" class="rounded-full h-10 w-10"></td>
+                            <td class="py-2 px-4 border-b border-grey-light">María Gómez</td>
+                            <td class="py-2 px-4 border-b border-grey-light">Usuario</td>
+                        </tr>
+                        <tr class="hover:bg-grey-lighter">
+                            <td class="py-2 px-4 border-b border-grey-light"><img src="https://via.placeholder.com/40" alt="Foto Perfil" class="rounded-full h-10 w-10"></td>
+                            <td class="py-2 px-4 border-b border-grey-light">Carlos López</td>
+                            <td class="py-2 px-4 border-b border-grey-light">Usuario</td>
+                        </tr>
+                        <tr class="hover:bg-grey-lighter">
+                            <td class="py-2 px-4 border-b border-grey-light"><img src="https://via.placeholder.com/40" alt="Foto Perfil" class="rounded-full h-10 w-10"></td>
+                            <td class="py-2 px-4 border-b border-grey-light">Laura Torres</td>
+                            <td class="py-2 px-4 border-b border-grey-light">Comercio</td>
+                        </tr>
+                        <tr class="hover:bg-grey-lighter">
+                            <td class="py-2 px-4 border-b border-grey-light"><img src="https://via.placeholder.com/40" alt="Foto Perfil" class="rounded-full h-10 w-10"></td>
+                            <td class="py-2 px-4 border-b border-grey-light">Ana Ramírez</td>
+                            <td class="py-2 px-4 border-b border-grey-light">Usuario</td>
+                        </tr>
+                        <tr class="hover:bg-grey-lighter">
+                            <td class="py-2 px-4 border-b border-grey-light"><img src="https://via.placeholder.com/40" alt="Foto Perfil" class="rounded-full h-10 w-10"></td>
+                            <td class="py-2 px-4 border-b border-grey-light">Luis Martínez</td>
+                            <td class="py-2 px-4 border-b border-grey-light">Comercio</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <div class="text-right mt-4">
+                        <button class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded">
+Ver más
+</button>
                     </div>
                 </div>
-                <div class="relative">
-                    <div>
-                        <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                            2021</p>
-                        <div class="absolute bottom-0 left-0 md:p-10 p-6">
-                            <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                            <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                            <a href="javascript:void(0)"
-                               class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <img src="https://i.ibb.co/Ms4qyXp/img-3.png" alt="sitting place"
-                         class="w-full mt-8 md:mt-6 hidden sm:block"/>
-                    <img class="w-full mt-4 sm:hidden" src="https://i.ibb.co/6XYbN7f/Rectangle-29.png"
-                         alt="sitting place"/>
-                </div>
-            </div>
-            <div class="lg:w-1/2 xl:ml-8 lg:ml-4 lg:mt-0 md:mt-6 mt-4 lg:flex flex-col justify-between">
-                <div class="relative">
-                    <div>
-                        <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                            2021</p>
-                        <div class="absolute bottom-0 left-0 md:p-10 p-6">
-                            <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                            <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                            <a href="javascript:void(0)"
-                               class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <img src="https://i.ibb.co/6Wfjf2w/img-4.png" alt="sitting place" class="w-full sm:block hidden"/>
-                    <img class="w-full sm:hidden" src="https://i.ibb.co/dpXStJk/Rectangle-29.png" alt="sitting place"/>
-                </div>
-                <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 md:mt-6 mt-4">
-                    <div class="relative w-full">
-                        <div>
-                            <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                                2021</p>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                                <a href="javascript:void(0)"
-                                   class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                              stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="https://i.ibb.co/3yvZBpm/img-5.png" class="w-full" alt="chair"/>
-                    </div>
-                    <div class="relative w-full sm:mt-0 mt-4">
-                        <div>
-                            <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                                2021</p>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                                <a href="javascript:void(0)"
-                                   class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                              stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="https://i.ibb.co/gDdnJb5/img-6.png" class="w-full" alt="wall design"/>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+                     <div class="bg-white p-4 rounded-md mt-4">
+    <h2 class="text-gray-500 text-lg font-semibold pb-4">Templates</h2>
+    <div class="my-1"></div>
+    <div class="bg-gradient-to-r from-cyan-300 to-cyan-500 h-px mb-6"></div>
+    <table class="w-full table-auto text-sm">
+        <thead>
+            <tr class="text-sm leading-normal">
+                <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light">Nombre</th>
+                <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light">Fecha</th>
+                <th class="py-2 px-4 bg-grey-lightest font-bold uppercase text-sm text-grey-light border-b border-grey-light text-right">Monto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hover:bg-grey-lighter">
+                <td class="py-2 px-4 border-b border-grey-light">Carlos Sánchez</td>
+                <td class="py-2 px-4 border-b border-grey-light">27/07/2023</td>
+                <td class="py-2 px-4 border-b border-grey-light text-right">$1500</td>
+            </tr>
+            <tr class="hover:bg-grey-lighter">
+                <td class="py-2 px-4 border-b border-grey-light">Ana Torres</td>
+                <td class="py-2 px-4 border-b border-grey-light">28/07/2023</td>
+                <td class="py-2 px-4 border-b border-grey-light text-right">$2000</td>
+            </tr>
+            <tr class="hover:bg-grey-lighter">
+                <td class="py-2 px-4 border-b border-grey-light">Juan Ramírez</td>
+                <td class="py-2 px-4 border-b border-grey-light">29/07/2023</td>
+                <td class="py-2 px-4 border-b border-grey-light text-right">$1800</td>
+            </tr>
+            <tr class="hover:bg-grey-lighter">
+                <td class="py-2 px-4 border-b border-grey-light">María Gómez</td>
+                <td class="py-2 px-4 border-b border-grey-light">30/07/2023</td>
+                <td class="py-2 px-4 border-b border-grey-light text-right">$2100</td>
+            </tr>
+            <tr class="hover:bg-grey-lighter">
+                <td class="py-2 px-4 border-b border-grey-light">Luis González</td>
+                <td class="py-2 px-4 border-b border-grey-light">31/07/2023</td>
+                <td class="py-2 px-4 border-b border-grey-light text-right">$1700</td>
+            </tr>
+            <tr class="hover:bg-grey-lighter">
+                <td class="py-2 px-4 border-b border-grey-light">Laura Pérez</td>
+                <td class="py-2 px-4 border-b border-grey-light">01/08/2023</td>
+                <td class="py-2 px-4 border-b border-grey-light text-right">$2400</td>
+            </tr>
+            <tr class="hover:bg-grey-lighter">
+                <td class="py-2 px-4 border-b border-grey-light">Pedro Hernández</td>
+                <td class="py-2 px-4 border-b border-grey-light">02/08/2023</td>
+                <td class="py-2 px-4 border-b border-grey-light text-right">$1950</td>
+            </tr>
+            <tr class="hover:bg-grey-lighter">
+                <td class="py-2 px-4 border-b border-grey-light">Sara Ramírez</td>
+                <td class="py-2 px-4 border-b border-grey-light">03/08/2023</td>
+                <td class="py-2 px-4 border-b border-grey-light text-right">$1850</td>
+            </tr>
+            <tr class="hover:bg-grey-lighter">
+                <td class="py-2 px-4 border-b border-grey-light">Daniel Torres</td>
+                <td class="py-2 px-4 border-b border-grey-light">04/08/2023</td>
+                <td class="py-2 px-4 border-b border-grey-light text-right">$2300</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="text-right mt-4">
+        <button class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded">
+Ver más
+</button>
     </div>
 </div>
-</body>
-</html>
+                </div>
+            </div>
+
