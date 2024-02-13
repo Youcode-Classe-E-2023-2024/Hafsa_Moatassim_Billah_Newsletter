@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MediaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
@@ -56,6 +57,18 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('/dashredacteur', function () {
+    return view('dashredacteur');
+});
+
 Route::get('/users', function () {
     return view('users');
 });
+
+
+Route::get('/upload' ,[MediaController::class, 'index'])->name('upload');
+Route::post('/upload' ,[MediaController::class, 'store'])->name('upload');
+
+Route::get('/media' ,[MediaController::class, 'showCards'])->name('media');
+
+Route::delete('/delete/{id}' , [MediaController::class, 'destroy'])->name('delete.media');
