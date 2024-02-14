@@ -52,6 +52,7 @@ class MediaController extends Controller
         $medias = Medias::all();
         $user = User::pluck('name', 'id');
 
+
         return view('media', compact('medias', 'user'));
     }
 

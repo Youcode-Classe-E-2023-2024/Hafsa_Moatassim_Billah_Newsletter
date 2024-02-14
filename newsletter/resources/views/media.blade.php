@@ -11,13 +11,12 @@
                 <div
                     class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
                     <div>
-                        <img class="object-center object-cover h-auto w-full"
-                             src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-                             alt="photo">
+                        <img src="{{ asset('storage/' . "$mediaItem->id/" . $mediaItem->file_name) }}" alt="Media Image">
+
                     </div>
                     <div class="text-center py-8 sm:py-6">
                         <p class="text-xl text-gray-700 font-bold mb-2">{{$mediaItem->name}}</p>
-                        <p class="text-base text-gray-400 font-normal">{{$mediaItem->mime_type}}</p>
+                        <p class="text-base text-gray-400 font-normal">{{ $mediaItem->created_at->toFormattedDateString() }}</p>
                         <p class="text-base text-gray-400 font-normal">{{ $user[$media->user_id] }}</p>
                     </div>
                 </div>
