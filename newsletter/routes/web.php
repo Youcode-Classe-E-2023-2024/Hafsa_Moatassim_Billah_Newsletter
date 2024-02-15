@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
@@ -54,6 +55,9 @@ Route::middleware('auth')->group(function () {
 Route::get('/users', function () {
     return view('users');
 });
+
+Route::get('/users', [UserController::class, 'show']);
+
 
 Route::get('/subscribers', function () {
     return view('subscribers');

@@ -1,176 +1,56 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>dashboard</title>
-</head>
-<body>
-<div class="container mx-auto px-6 sm:px-12 flex items-center justify-end">
-    <nav class="flex items-center">
-        <a href="/"
-           class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Home</a>
-        <a href="/about"
-           class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">About</a>
-        <a href="#"
-           class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Gallery</a>
-        <form action="{{'logout'}}" method="post">
-            @csrf
-            <button type="submit"
-                    class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">
-                Logout
-            </button>
-        </form>
-    </nav>
-</div>
-<div class="flex justify-center items-center">
-    <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
-    <div class="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
-        <div role="main" class="flex flex-col items-center justify-center">
-            <h1 class="text-4xl font-semibold leading-9 text-center text-gray-800 dark:text-gray-50">This Week
-                Newsletter</h1>
-            <p class="text-base leading-normal text-center text-gray-600 dark:text-white mt-4 lg:w-1/2 md:w-10/12 w-11/12">
-                If you're looking for random paragraphs, you've come to the right place. When a random word or a random
-                sentence isn't quite enough</p>
-        </div>
-        <div class="lg:flex items-stretch md:mt-12 mt-8">
-            <div class="lg:w-1/2">
-                <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6">
-                    <div class="sm:w-1/2 relative">
-                        <div>
-                            <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                                2021</p>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                                <a href="javascript:void(0)"
-                                   class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                              stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="https://i.ibb.co/DYxtCJq/img-1.png" class="w-full" alt="chair"/>
-                    </div>
-                    <div class="sm:w-1/2 sm:mt-0 mt-4 relative">
-                        <div>
-                            <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                                2021</p>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                                <a href="javascript:void(0)"
-                                   class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                              stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="https://i.ibb.co/3C5HvxC/img-2.png" class="w-full" alt="wall design"/>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div>
-                        <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                            2021</p>
-                        <div class="absolute bottom-0 left-0 md:p-10 p-6">
-                            <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                            <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                            <a href="javascript:void(0)"
-                               class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <img src="https://i.ibb.co/Ms4qyXp/img-3.png" alt="sitting place"
-                         class="w-full mt-8 md:mt-6 hidden sm:block"/>
-                    <img class="w-full mt-4 sm:hidden" src="https://i.ibb.co/6XYbN7f/Rectangle-29.png"
-                         alt="sitting place"/>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<nav class="flex justify-center">
+    <a href="/"
+       class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Home</a>
+    <a href="/about"
+       class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">About</a>
+    <a href="#"
+       class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Gallery</a>
+</nav>
+
+<div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-slate-100 py-6 sm:py-12">
+    <div class="min-h-28 ">
+        <div class="max-w-screen-lg mx-auto py-4">
+            <div
+                class="rounded-lg overflow-hidden relative before:absolute before:z-20 before:bg-black before:h-full before:w-full before:bg-gradient-to-tr before:from-black before:to-emerald-600 before:opacity-80">
+                <img src="https://loremflickr.com/320/240?random=1"
+                     class="absolute z-10 object-cover h-80 w-full h-full" alt="">
+                <a href="" class="absolute z-20  top-1/2  right-20 text-white -translate-y-1/2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="w-20 h-20">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z"/>
+                    </svg>
+                </a>
+                <div class="relative z-20 p-10 h-full w-1/2">
+                    <h2 class="text-white text-3xl font-semibold">ASA fitoriana ny filazantsara iarivo avaradrano</h2>
+                    <h3 class="text-white text-xl">Docteur Irako Andriamahasoa Ammi</h3>
+                    <p class="text-sm text-slate-200 mt-4">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga veritatis officiis cupiditate sed
+                        sint natus alias placeat, asperiores tempore reiciendis.
+                    </p>
                 </div>
             </div>
-            <div class="lg:w-1/2 xl:ml-8 lg:ml-4 lg:mt-0 md:mt-6 mt-4 lg:flex flex-col justify-between">
-                <div class="relative">
-                    <div>
-                        <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                            2021</p>
-                        <div class="absolute bottom-0 left-0 md:p-10 p-6">
-                            <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                            <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                            <a href="javascript:void(0)"
-                               class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                          stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <img src="https://i.ibb.co/6Wfjf2w/img-4.png" alt="sitting place" class="w-full sm:block hidden"/>
-                    <img class="w-full sm:hidden" src="https://i.ibb.co/dpXStJk/Rectangle-29.png" alt="sitting place"/>
-                </div>
-                <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 md:mt-6 mt-4">
-                    <div class="relative w-full">
-                        <div>
-                            <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                                2021</p>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                                <a href="javascript:void(0)"
-                                   class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                              stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="https://i.ibb.co/3yvZBpm/img-5.png" class="w-full" alt="chair"/>
-                    </div>
-                    <div class="relative w-full sm:mt-0 mt-4">
-                        <div>
-                            <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0">12 April
-                                2021</p>
-                            <div class="absolute bottom-0 left-0 p-6">
-                                <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
-                                <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
-                                <a href="javascript:void(0)"
-                                   class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
-                                    <p class="pr-2 text-sm font-medium leading-none">Read More</p>
-                                    <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2"
-                                              stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <img src="https://i.ibb.co/gDdnJb5/img-6.png" class="w-full" alt="wall design"/>
-                    </div>
-                </div>
-            </div>
+
+            {{--                @foreach($medias as $media)--}}
+            {{--                    @foreach($media->getMedia() as $mediaItem)--}}
+            {{--                <div class="flex gap-6 mt-6">--}}
+            {{--                    <div class="bg-white w-1/3 shadow rounded-lg overflow-hidden flex flex-col">--}}
+            {{--                        <img src="{{ asset('storage/' . "$mediaItem->id/" . $mediaItem->file_name) }}" class="object-cover h-52 w-full" alt="">--}}
+            {{--                        <div class="p-6 flex flex-col flex-1">--}}
+            {{--                            <span class="block text-slate-400 font-semibold text-sm">{{ $mediaItem->created_at->toFormattedDateString() }}</span>--}}
+            {{--                            <h3 class="mt-3 mb-2 font-bold text-lg">--}}
+            {{--                                <a href="https://play.tailwindcss.com/TGny89rOkl?layout=horizontal">--}}
+            {{--                                    Fiofanana FLM SPIA 19 11 Fevrier 2023</a></h3>--}}
+            {{--                        </div>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--                @endforeach--}}
+            {{--                @endforeach--}}
+
+
         </div>
     </div>
 </div>
-</body>
-</html>

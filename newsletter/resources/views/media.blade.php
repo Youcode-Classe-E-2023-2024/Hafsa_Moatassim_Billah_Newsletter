@@ -19,7 +19,6 @@
                         <p class="text-base text-gray-400 font-normal">{{ $user[$media->user_id] }}</p>
                     </div>
                 </div>
-
             @endforeach
         @endforeach
     </div>
