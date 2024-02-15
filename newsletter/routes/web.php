@@ -65,3 +65,7 @@ Route::get('/subscribers', function () {
 
 Route::get('/media', [MediaController::class, 'showCards'])->name('media');
 Route::delete('/delete/{id}', [MediaController::class, 'destroy'])->name('delete.media');
+
+Route::delete('/delete/{id}', [UserController::class, 'destroy']);
+
+

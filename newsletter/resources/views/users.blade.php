@@ -38,22 +38,28 @@
                                         @endforeach
                                     </span>
                         </td>
-                        <td class="py-2 text-center px-4 border-b border-grey-light">
-                            <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">
-                                Delete User
-                            </button>
-                            <button class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded">
-                                Update The Role
-                            </button>
+                        <td class="space-x-3 flex justify-center py-2 text-center px-4 border-b border-grey-light">
+                            <form action="/delete/{{$user->id}}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class=" bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">
+                                    Delete User
+                                </button>
+                            </form>
+
+                            <a href="/update/{{$user->id}}" class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded">
+                                Update Role
+                            </a>
                         </td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
+            <div class="p-4">
+                {{$users->links()}}
+            </div>
         </div>
-        <div>
-            {{$users->links()}}
-        </div>
+
 
     </div>
 </div>
