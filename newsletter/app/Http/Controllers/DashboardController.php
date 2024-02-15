@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Spatie\Permission\Models\Role;
 
-class UserController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-
+    public function index()
+    {
+        //
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -27,10 +29,11 @@ class UserController extends Controller
     public function show()
     {
         $users = User::with('roles')->paginate(8);
-        $role = Role::all();
+        $totalUsersCount = User::count();
 
-        return view('users', compact('users', 'role'));
+        return view('dashboard', compact('users', 'totalUsersCount'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -43,11 +46,8 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(string $id)
     {
-        $user_id = User::find($id);
-        $user_id->delete();
-
-        return redirect('users');
+        //
     }
 }

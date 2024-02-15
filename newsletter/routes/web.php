@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
@@ -52,9 +53,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/upload', [MediaController::class, 'store'])->name('upload');
 });
 
-Route::get('/users', function () {
-    return view('users');
-});
+//Route::get('/users', function () {
+//    return view('users');
+//});
 
 Route::get('/users', [UserController::class, 'show']);
 
@@ -67,5 +68,9 @@ Route::get('/media', [MediaController::class, 'showCards'])->name('media');
 Route::delete('/delete/{id}', [MediaController::class, 'destroy'])->name('delete.media');
 
 Route::delete('/delete/{id}', [UserController::class, 'destroy']);
+
+Route::get('/dashboard', [DashboardController::class, 'show']);
+//Route::get('/users', [UserController::class, 'show']);
+
 
 
