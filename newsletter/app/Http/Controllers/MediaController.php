@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class MediaController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
