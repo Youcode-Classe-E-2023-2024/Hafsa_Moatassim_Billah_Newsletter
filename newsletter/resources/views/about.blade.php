@@ -142,8 +142,13 @@
     <nav class="flex items-center">
         <a href="/" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Home</a>
         <a href="/about" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">About</a>
-        <a href="#" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Gallery</a>
-        <a href="" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Logout</a>
+        <a href="/gallery" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">Gallery</a>
+        <form action="/logout" method="POST">
+            @csrf
+            <button type="submit" class="hidden xl:block font-abhaya-libre uppercase text-gray-800 tracking-wider px-4 xl:px-8 py-2 text-lg hover:underline">
+                Logout
+            </button>
+        </form>
     </nav>
 
 <div class= 'container'>

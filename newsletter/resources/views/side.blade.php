@@ -60,7 +60,6 @@
                 @endhasrole
             </nav>
             <form action="/logout" method="POST">
-
                 <button type="submit">
                     @csrf
 {{--                    @method('DELETE')--}}
