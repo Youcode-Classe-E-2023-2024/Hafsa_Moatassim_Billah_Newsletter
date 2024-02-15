@@ -26,8 +26,9 @@
 
             <nav>
                 <div class="hidden p-10 md:flex items-center">
-                    <img src="picture/logo.png" alt="Logo" class="w-28 h-18 mr-2">
+                    <img href="/" src="picture/logo.png" alt="Logo" class="w-28 h-18 mr-2">
                 </div>
+
                 @hasrole('admin')
                 <a class="block text-gray-500 py-2.5 px-4 my-4 rounded transition duration-200 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-cyan-300 hover:text-white"
                    href="/dashboard"><i class="fas fa-home mr-2"></i>Dashboard
