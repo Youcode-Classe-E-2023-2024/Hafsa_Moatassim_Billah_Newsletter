@@ -27,19 +27,28 @@ class UserController extends Controller
     public function show()
     {
         $users = User::with('roles')->paginate(8);
-        $role = Role::all();
+        $roles = Role::all();
 
-        return view('users', compact('users', 'role'));
+        return view('users', compact('users', 'roles'));
     }
+
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $request->validate([
+            'role' => 'required'
+        ]);
+        $role = Role::find($request->role);
+        $user = User::find($id);
 
+        $user->syncRoles($role->name);
+
+        return redirect('users')->with('success', 'Role Updated successfully');
+
+    }
     /**
      * Remove the specified resource from storage.
      */

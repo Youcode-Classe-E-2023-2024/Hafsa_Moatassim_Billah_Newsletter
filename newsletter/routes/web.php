@@ -58,6 +58,7 @@ Route::middleware('auth')->group(function () {
 //});
 
 Route::get('/users', [UserController::class, 'show']);
+Route::post('/users/{id}', [UserController::class, 'update']);
 
 
 Route::get('/subscribers', function () {
