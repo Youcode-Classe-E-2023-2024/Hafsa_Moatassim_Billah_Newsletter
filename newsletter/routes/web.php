@@ -49,6 +49,10 @@ Route::middleware('auth')->group(function () {
         return view('dashredacteur');
     });
 
+    Route::get('/template', function () {
+        return view('template');
+    });
+
     Route::get('/upload', [MediaController::class, 'index'])->name('upload');
     Route::post('/upload', [MediaController::class, 'store'])->name('upload');
 });
