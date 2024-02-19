@@ -28,16 +28,16 @@
                     <span class="text-red-500">*</span></label></br>
                 <textarea name="content" class="border-2 border-gray-500" required></textarea>
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-evenly">
                 <div>
                     <select class="border-2 border-gray-300 border-r p-2" name="media">
-                        @foreach($medias as $media)
-                            @foreach($media['media'] as $image)
+{{--                        @foreach($medias as $media)--}}
+{{--                            @foreach($media['media'] as $image)--}}
                                 <option name="media" value="">
                                     <img src="{{asset("")}}" alt="">
                                 </option>
-                            @endforeach
-                        @endforeach
+{{--                            @endforeach--}}
+{{--                        @endforeach--}}
                     </select>
                 </div>
                 <button

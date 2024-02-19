@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
@@ -78,4 +79,16 @@ Route::get('/dashboard', [DashboardController::class, 'show']);
 //Route::get('/users', [UserController::class, 'show']);
 
 
+Route::get('/subscribers', [TemplateController::class, 'showS']);
+
+Route::post('/createTemplate', [TemplateController::class, 'store']);
+Route::get('/templates', [TemplateController::class, 'showTemplate']);
+
+Route::get('/editTemplate/{id}', [TemplateController::class, 'editTemplate']);
+Route::put('/updateTemplate/{id}', [TemplateController::class, 'updateTemplate']);
+
+
+Route::post('/deleteTemplate/{id}', [TemplateController::class, 'deleteTemplate']);
+
+Route::get('/send/{id}', [TemplateController::class, 'sendNewsletter']);
 
